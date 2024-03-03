@@ -79,7 +79,7 @@ DATABASES = {
         "NAME": os.getenv("MYSQL_DBNAME"),
         "USER": os.getenv("MYSQL_USER"),
         "PASSWORD": os.getenv("MYSQL_PASSWORD"),
-        "Host": os.getenv("MYSQL_Host"),
+        "HOST": os.getenv("MYSQL_HOST"),
         "OPTIONS": {
             "init_command": "SET NAMES 'utf8mb4';SET sql_mode = 'STRICT_TRANS_TABLES'",
             "charset": "utf8mb4",
