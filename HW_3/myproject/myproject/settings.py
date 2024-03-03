@@ -27,8 +27,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = os.getenv('DEBUG')
 DEBUG = False if os.environ.get("DEBUG") == "False" else True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
 
 ALLOWED_HOSTS = ['127.0.0.10', '192.168.0.210', 'RuslanAh81ru.pythonanywhere.com']
 
