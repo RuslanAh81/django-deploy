@@ -92,20 +92,21 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'shop_database',
-#         'USER': 'root',
-#         'PASSWORD': 'ruslan',
-#         'HOST': '192.168.99.100',
-#         'PORT': '3308',
-#         'OPTIONS': {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-#
-#         },
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'shop_database',
+        'USER': 'root',
+        'PASSWORD': 'ruslan',
+        # 'HOST': '192.168.99.100',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+
+        },
+    }
+}
 
 
 # Password validation
