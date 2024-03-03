@@ -25,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = 'django-insecure-rwyt#g^29dq+#^^c)@p_q&doxf@z*(8=2mi-+4te+ejr6w2yne'
 SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+# DEBUG = os.getenv('DEBUG')
+DEBUG = False if os.environ.get("DEBUG") == "False" else True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
