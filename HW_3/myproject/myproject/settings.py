@@ -97,7 +97,7 @@ DATABASES = {
         'NAME': 'shop_database',
         'USER': 'root',
         'PASSWORD': 'ruslan',
-        'HOST': '127.0.0.1',
+        'HOST': '192.168.99.100',
         'PORT': '3308',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
