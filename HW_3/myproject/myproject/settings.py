@@ -78,6 +78,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": os.getenv("MYSQL_DBNAME"),
         "USER": os.getenv("MYSQL_USER"),
+        "PASSWORD": os.getenv("MYSQL_PASSWORD"),
         "Host": os.getenv("MYSQL_Host"),
         "OPTIONS": {
             "init_command": "SET NAMES 'utf8mb4';SET sql_mode = 'STRICT_TRANS_TABLES'",
@@ -91,20 +92,20 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'shop_database',
-        'USER': 'root',
-        'PASSWORD': 'ruslan',
-        'HOST': '192.168.99.100',
-        'PORT': '3308',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-
-        },
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'shop_database',
+#         'USER': 'root',
+#         'PASSWORD': 'ruslan',
+#         'HOST': '192.168.99.100',
+#         'PORT': '3308',
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+#
+#         },
+#     }
+# }
 
 
 # Password validation
