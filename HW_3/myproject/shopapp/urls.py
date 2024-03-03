@@ -9,10 +9,10 @@ urlpatterns = [
     path('orders/', views.orders, name='all_orders'),
     path('all_client_orders/<int:client_id>', views.show_all_client_orders, name='show_all_clients_orders'),
     path('last_client_orders/<int:client_id>', views.show_last_client_orders, name='show_last_client_orders'),
-    path('create_product', views.create_product, name='create_product'),
+    path('create_product/', views.create_product, name='create_product'),
     path('create-client/', views.form),
     path('add-client/', views.add_client),
-    path('add-product', views.product_add),
+    path('add-product/', views.product_add),
     path('show_all_products/', views.show_all_products, name='show_all_products'),
     path('edit_product/<int:product_id>', views.edit_product, name='edit_product')
 
