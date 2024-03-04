@@ -30,7 +30,7 @@ DEBUG = False if os.environ.get("DEBUG") == "False" else True
 SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 
-ALLOWED_HOSTS = ['127.0.0.10', '192.168.0.210', 'RuslanAh81ru.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.0.210', 'RuslanAh81ru.pythonanywhere.com']
 
 
 # Application definition
@@ -74,40 +74,40 @@ TEMPLATES = [
 ]
 
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": os.getenv("MYSQL_DBNAME"),
-        "USER": os.getenv("MYSQL_USER"),
-        "PASSWORD": os.getenv("MYSQL_PASSWORD"),
-        "HOST": os.getenv("MYSQL_HOST"),
-        "OPTIONS": {
-            "init_command": "SET NAMES 'utf8mb4';SET sql_mode = 'STRICT_TRANS_TABLES'",
-            "charset": "utf8mb4",
-        },
-    }
-}
-WSGI_APPLICATION = 'myproject.wsgi.application'
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": os.getenv("MYSQL_DBNAME"),
+#         "USER": os.getenv("MYSQL_USER"),
+#         "PASSWORD": os.getenv("MYSQL_PASSWORD"),
+#         "HOST": os.getenv("MYSQL_HOST"),
+#         "OPTIONS": {
+#             "init_command": "SET NAMES 'utf8mb4';SET sql_mode = 'STRICT_TRANS_TABLES'",
+#             "charset": "utf8mb4",
+#         },
+#     }
+# }
+# WSGI_APPLICATION = 'myproject.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'shop_database',
-#         'USER': 'root',
-#         'PASSWORD': 'ruslan',
-#         # 'HOST': '192.168.99.100',
-#         'HOST': '127.0.0.1',
-#         'PORT': '3306',
-#         'OPTIONS': {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-#
-#         },
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'shop_database',
+        'USER': 'root',
+        'PASSWORD': 'ruslan',
+        # 'HOST': '192.168.99.100',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+
+        },
+    }
+}
 
 
 # Password validation

@@ -2,10 +2,10 @@ from django.db import models
 
 
 class Client(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    phone = models.CharField(max_length=11)
-    address = models.CharField(max_length=250)
+    name = models.CharField(max_length=100, verbose_name='Имя')
+    email = models.EmailField(verbose_name='email')
+    phone = models.CharField(max_length=11, verbose_name='Телефон')
+    address = models.CharField(max_length=250, verbose_name='Адрес')
     date_registered = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

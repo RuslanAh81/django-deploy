@@ -100,7 +100,6 @@ def create_product(request):
             form.save()
             message = f'Товар создан'
             form = forms.ProductForm()
-            #return render(request, "shop_app/create_product_form.html", {'form': form, 'message': message})
     else:
         form =forms.ProductForm()
         message = 'Создание нового товара'
@@ -109,17 +108,18 @@ def create_product(request):
 
 def create_client(request):
     if request.method == 'POST':
-        form = forms.ClientForm(request.POST, request.FILES)
+        form = forms.ClientForm(request.POST)
+        form_for_client = form
         message = 'Ошибка в данных'
-        if form.is_valid():
+        if form_for_client.is_valid():
             form.save()
             message = f'Клиент создан'
-            form = forms.ClientForm()
-           #return render(request, "shop_app/create_product_form.html", {'form': form, 'message': message})
+            form_for_client = forms.ClientForm()
+        return render(request, "create_client_form.html", {'form': form_for_client, 'message': message})
     else:
-        form =forms.ProductForm()
-        message = 'Создание нового товара'
-    return render(request, 'create_client_form.html', {'form': form, 'message': message})
+        form_for_client = forms.ClientForm()
+        message = 'Создание нового клиента'
+    return render(request, 'create_client_form.html', {'form': form_for_client, 'message': message})
 
 def add_client(request):
     form = forms.ClientForm(request.POST)
