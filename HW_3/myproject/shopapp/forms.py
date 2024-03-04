@@ -12,7 +12,6 @@ class ProductForm(ModelForm):
 class ClientForm(ModelForm):
     class Meta:
         model = Client
-        print("Hello")
         fields = ['name', 'email', 'phone', 'address']
 
 
